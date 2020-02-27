@@ -1,3 +1,6 @@
+/**
+ * 判断环节点的入口
+ */
 public class EntryNodeOfLoop {
     public ListNode EntryNodeOfLoop(ListNode pHead) {
         if (pHead == null || pHead.next == null)
@@ -15,7 +18,7 @@ public class EntryNodeOfLoop {
         if (flag == false) {//标记没变，说明不存在环
             return null;
         } else {
-            fast = pHead;//发现如果让两个指针同时从起点和相遇点开始，每次只走过一个距离，那么最后他们会在环入口节点相遇。
+            fast = pHead;//:发现如果让两个指针同时从起点和相遇点开始，每次只走过一个距离，那么最后他们会在环入口节点相遇。
             while (slow != fast) {
                 slow = slow.next;
                 fast = fast.next;

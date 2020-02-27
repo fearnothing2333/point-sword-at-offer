@@ -31,7 +31,7 @@ public class LowestCommonAncestor {
     }
 
     /**
-     * 顺序数组二叉搜索树的公共祖先
+     * 顺序数组二叉搜索树的公共祖先,奇安信的题
      *
      * @param arr 数组
      * @param n   头节点值

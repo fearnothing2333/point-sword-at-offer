@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -8,28 +7,6 @@ import java.util.Stack;
  */
 
 public class Test048 {
-    public int getMaxSubstringWithoutDuplication(String s) {
-        //定义初始返回值
-        int res = 0;
-        if (s.length() == 0) {
-            return res;
-        }
-        //定义一个map用于存放并更新出现过的字符位置
-        HashMap<Character, Integer> map = new HashMap<>();
-        //定义左指针和右指针，双指针遍历字符串
-        for (int left = 0, right = 0; right < s.length(); right++) {
-            //判断右指针是否扫描过该字符
-            if (map.containsKey(s.charAt(right))) {
-                //如果出现过便将左指针所在下标更改
-                left = Math.max(left, map.get(s.charAt(right)) + 1);
-            }
-            //存放并更新出现过的字符位置
-            map.put(s.charAt(right), right);
-            //存放最大的子字符串长度
-            res = Math.max(res, (right - left) + 1);
-        }
-        return res;
-    }
 
     /**
      * 从尾到头打印链表方法01

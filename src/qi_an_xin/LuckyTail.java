@@ -1,3 +1,8 @@
+package qi_an_xin;
+
+/**
+ * 幸运队尾
+ */
 public class LuckyTail {
     /**
      * @param n 有n个人
@@ -15,15 +20,15 @@ public class LuckyTail {
                 if (arr[i] == 1) {
                     j--;
                     continue;
-                } else if (j == 5 && i == n - 1) {
+                } else if (j == t && i == n - 1) {
                     cnt++;
                     arr[i] = 1;
                     break;
-                } else if (j == 5 && i != n - 1) {
+                } else if (j == t && i != n - 1) {
                     arr[i]++;
                     j = 0;
                     cnt++;
-                } else if (j != 5 && i == n - 1) {
+                } else if (j != t && i == n - 1) {
                     i = -1;
                 }
             }

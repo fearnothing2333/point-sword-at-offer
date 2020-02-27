@@ -20,12 +20,12 @@ public class ClockwisePrintMatrix {
             for (int i = rs + 1; i <= re; i++) {//向下走
                 ints.add(arr[i][ce]);
             }
-            if (rs != re) {//如果 rs=re 说明只剩一行了，且在向右走的时候已经走过了
+            if (rs != re) {//如果 rs=re 说明只剩一行了，且在向右走的时候已经走完了
                 for (int i = ce - 1; i >= cs; i--) {//向左走
                     ints.add(arr[re][i]);
                 }
             }
-            if (cs != ce) {//如果 cs=ce 说明只剩一列了，且在向下走的时候已经走过了
+            if (cs != ce) {//如果 cs=ce 说明只剩一列了，且在向下走的时候已经走完了
                 for (int i = re - 1; i > rs; i--) {//向上走
                     ints.add(arr[i][cs]);
                 }
